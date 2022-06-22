@@ -14,7 +14,6 @@ export default class MembersModel extends AbstractObservable {
 	init = async () => {
 		try {
 			this.#members = await this.#apiService.members;
-			this.#members = [this.#members[0]];
 		} catch(err) {
 			console.error(err);
 			this.#members = [];
